@@ -55,6 +55,7 @@ h5,
 h6,
 p {
   margin-top: 0;
+  margin-bottom: 40px;
 }
 /*Style-link*/
 ul {
@@ -124,7 +125,7 @@ header {
 }
 .icon-follow-us {
   /* fill: var(--background1);*/
-  fill: var(--primary);
+  fill: white;
 }
 .icon-follow-us:hover {
   fill: var(--color-brand);
@@ -145,9 +146,12 @@ header {
 
   margin-bottom: 7px;
 }
-/*.maintitle-container {
-  display: flex;
-}*/
+.maintitle-container {
+  max-width: 1240px;
+  width: 100%;
+  max-height: 307px;
+  height: 100%;
+}
 .main-title {
   font-weight: 700;
   font-size: 140px;
@@ -176,6 +180,7 @@ header {
   background-color: transparent;
 }
 .button-paragraf {
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 12px;
   line-height: 150%;
@@ -190,6 +195,8 @@ header {
   display: flex;
   margin-bottom: 140px;
   gap: 32px;
+}
+.aboutus-section-title {
 }
 
 aboutus-text {
