@@ -203,13 +203,11 @@ aboutus-text {
   font-size: 22px;
   line-height: 173%;
   color: var(--primary);
-  border: 3px, solid, #0bebeb;
 }
 /*.aboutus {
   margin-bottom: 40px;
 }*/
 .beauty-img {
-  border: 1px, solid, #ff2b36;
   display: flex;
   max-width: 499px;
   width: 100%;
@@ -294,7 +292,6 @@ aboutus-text {
 /*####-----####*/
 /*our-procedures-section*/
 .ourprocedures-section {
-  border: 1px solid #000;
   /*padding-bottom: 29px;*/
   padding-top: 72px;
 }
@@ -303,7 +300,6 @@ aboutus-text {
   /*margin-bottom: 62px;*/
 }
 .procedure-list {
-  border: 1px solid #2b7fff;
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
@@ -313,7 +309,6 @@ aboutus-text {
   /* border-radius: 120px 4px;*/
   width: 344px;
   height: 456px;
-  border: 1px solid #2b7fff;
   flex-basis: calc(100%-32px / 3);
   flex-wrap: wrap;
   background-image: linear-gradient(
@@ -329,7 +324,6 @@ aboutus-text {
   border-radius: 4px 120px;
 }
 .formats-container {
-  border: 1px solid #0bebeb;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -363,12 +357,10 @@ aboutus-text {
 /*Contacts-section*/
 .contacts-section {
   padding-bottom: 96px;
-  border: 1px solid #000;
 }
 .contacts-container {
   display: flex;
   gap: 32px;
-  border: 1px solid #2b7fff;
 }
 .contact-map {
   flex-shrink: 0;
