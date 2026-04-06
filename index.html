@@ -58,7 +58,7 @@
           <div class="maintitle-container">
             <p>Косметологічна клініка</p>
             <h1 class="main-title">Beauty Zone</h1>
-            <button class="button-primary" type="button">
+            <button class="modal-btn-open" type="button">
               Замовити дзвінок
             </button>
             <p class="button-paragraf">
@@ -95,10 +95,13 @@
                 src="./images/beautydown.jpg"
                 alt="beautydown"
               />
-              <svg class="star-icon" width="35" height="35">
+              <svg class="star-icon star-blue" width="35" height="35">
                 <use href="./images/Icons.svg#icon-Star-1"></use>
               </svg>
-              <svg class="star-icon" width="56" height="56">
+              <svg class="star-icon star-small" width="15" height="15">
+                <use href="./images/Icons.svg#icon-Star-1"></use>
+              </svg>
+              <svg class="star-icon star-big" width="56" height="56">
                 <use href="./images/Icons.svg#icon-Star-1"></use>
               </svg>
               <img
@@ -152,7 +155,7 @@
           <h2 class="section-title">
             Наші <span class="title-span">процедури</span>
           </h2>
-          <div class="fomats-container">
+          <div class="formats-container">
             <button class="arrows" type="button">
               <svg class="arrows-icon">
                 <use href="./images/Icons.svg#icon-Arrow"></use>
@@ -186,7 +189,7 @@
                 </li>
               </ul>
             </div>
-            <button class="arrows" type="button">
+            <button class="arrows next" type="button">
               <svg class="arrows-icon" width="44" height="44">
                 <use href="./images/Icons.svg#icon-Arrow"></use>
               </svg>
@@ -290,5 +293,11 @@
                   </div>
       </div>
     </footer>
+    <div class="backdrop">
+      <div class="modal">
+        <button class="modal-btn-close" type="button">Close</button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
