@@ -57,6 +57,12 @@ p {
   margin-top: 0;
   margin-bottom: 40px;
 }
+h2 {
+  font-family: 'Play', sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  text-align: center;
+}
 /*Style-link*/
 ul {
   margin: 0px;
@@ -143,7 +149,6 @@ header {
   background-size: cover;
   padding-top: 86px;
   padding-bottom: 163px;
-
   margin-bottom: 7px;
 }
 .maintitle-container {
@@ -151,6 +156,13 @@ header {
   width: 100%;
   max-height: 307px;
   height: 100%;
+  background: linear-gradient(
+    94deg,
+    #fff 9.65%,
+    rgba(255, 255, 255, 0.85) 26.08%,
+    rgba(255, 255, 255, 0.19) 52.74%,
+    rgba(255, 255, 255, 0) 74.46%
+  );
 }
 .main-title {
   font-weight: 700;
@@ -265,10 +277,6 @@ aboutus-text {
   gap: 56px;
 }
 .Whychooseus-section {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 133%;
-  /*text-align: center;*/
   color: #000;
   padding-bottom: 72px;
   margin-bottom: 124px;
@@ -276,6 +284,7 @@ aboutus-text {
 .Whychooseus-container {
   flex-basis: calc(100%-112px / 3); /*для адаптивності*/
   flex-wrap: wrap;
+  justify-content: center;
 }
 .card {
   border-radius: 32px;
@@ -342,8 +351,7 @@ aboutus-text {
   height: 44px;
   border-radius: 50%;
   background-color: transparent;
-  border: 1px;
-  border-color: var(--primary);
+  border: 1px, solid, #011c44;
   flex-shrink: 0; /*Щоб кнопки не стисткались*/
 }
 .arrows:hover {
@@ -351,6 +359,9 @@ aboutus-text {
 }
 .arrows:hover .arrows-icon {
   fill: var(--background1);
+}
+.arrows:hover {
+  border: transparent;
 }
 .arrows.next {
   transform: rotate(180deg);
@@ -368,6 +379,7 @@ aboutus-text {
 .contacts-container {
   display: flex;
   gap: 32px;
+  justify-content: center;
 }
 .contact-map {
   flex-shrink: 0;
@@ -382,12 +394,12 @@ aboutus-text {
 /*footer*/
 .footer {
   position: relative;
+  background-color: var(--primary);
 }
 .footer-container {
   display: flex;
-  background-color: var(--primary);
   /*align-content: center;*/
-  justify-content: space-around;
+  justify-content: space-between;
   flex-grow: 1;
   padding: 56px 0;
   line-height: 2;
