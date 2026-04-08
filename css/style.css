@@ -439,6 +439,11 @@ aboutus-text {
 .contacts-form span {
   color: var(--color-brand);
 }
+.agree-link {
+  font: 'Roboto', sans-serif;
+  text-decoration: none;
+  color: inherit;
+}
 
 /*footer*/
 .footer {
@@ -611,7 +616,8 @@ p {
   border-color: #747272;
   transform: translateY(-3px);
 }
-.agree {
+.agree,
+a {
   color: #747272;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -619,4 +625,8 @@ p {
   line-height: 150%;
   text-align: center;
   text-underline-offset: 2px;
+  text-decoration-skip-ink: none;
+}
+.agree a {
+  text-decoration: underline;
 }
