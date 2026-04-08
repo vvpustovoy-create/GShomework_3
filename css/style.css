@@ -31,6 +31,9 @@
 * {
   box-sizing: border-box; /*Візуальна модель форматування ,обнуляя відступи по замовченню*/
 }
+body {
+  margin: 0px;
+}
 :root {
   --color-brand: #2b7fff;
   --primary: #011c44;
@@ -489,14 +492,13 @@ p {
 }
 .footer::after {
   position: absolute;
-  z-index: 1;
-  width: 278px;
-  height: 213px;
+  width: 248px;
+  height: 153px;
   background-image: url(../images/footеr_decor.png);
   background-repeat: no-repeat;
   bottom: 0px;
   right: 0px;
-  /*content: url(../images/footеr_decor.png);*/
+  content: '';
 }
 /*####-----####*/
 /*Modal*/
