@@ -81,6 +81,7 @@ ul {
   font-weight: 400;
   font-family: 'Roboto', sans-serif;
 }
+
 /*####-----####*/
 /*Header*/
 header {
@@ -185,10 +186,13 @@ header {
   width: 219px;
   height: 53px;
   cursor: pointer;
+  transition: all 0.7s ease;
+  margin-bottom: 14px;
 }
 .modal-btn-open:hover {
   color: black;
   background-color: transparent;
+  transform: translateY(-3px);
 }
 .button-paragraf {
   font-family: 'Roboto', sans-serif;
@@ -257,9 +261,9 @@ aboutus-text {
   top: 32px;
   right: -27px;
   transform: rotate(45deg);
-  animation: fadeIn 5s ease-in;
+  animation: cameOut 5s ease-in infinite;
 }
-@keyframes fadeIn {
+@keyframes cameOut {
   from {
     opacity: 0;
   }
@@ -268,17 +272,30 @@ aboutus-text {
   }
 }
 
+@keyframes spinAndScale {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(2);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
 .star-small {
   fill: #747272;
   top: 269px;
   right: 6px;
-  animation: fadeIn 9s ease-in-out;
+  animation: cameOut 9s ease-in-out infinite;
+  animation: spinAndScale 10s infinite linear;
 }
 .star-big {
   fill: #011f4a;
   top: 336px;
   right: 295px;
-  animation: fadeIn 7s ease-in-out;
+  animation: spinAndScale 7s infinite linear;
 }
 /*####-----####*/
 /*Why-choose-us-section*/
@@ -330,7 +347,7 @@ aboutus-text {
   flex-wrap: wrap;
   gap: 16px;
   padding-bottom: 43px;
-  transform: translate(0.3s);
+  transform: translateY(-3px);
 }
 .list-services {
   /* border-radius: 120px 4px;*/
@@ -392,9 +409,28 @@ aboutus-text {
 }
 .contacts-container {
   display: flex;
-  gap: 32px;
   justify-content: center;
+  gap: 32px;
 }
+/*######FORMA######*/
+.contacts-form {
+  justify-content: center;
+  border-radius: 32px;
+  max-width: 423px;
+  padding: 48px 56px;
+  width: 100%;
+  max-height: 481px;
+  height: 100%;
+  background-color: var(--primary);
+}
+.contacts-form h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  text-align: center;
+  color: white;
+}
+/*####-----####*/
 .contact-map {
   flex-shrink: 0;
   border-radius: 32px;
@@ -403,12 +439,12 @@ aboutus-text {
 .contacts-form span {
   color: var(--color-brand);
 }
-/*####-----####*/
 
 /*footer*/
 .footer {
   position: relative;
   background-color: var(--primary);
+  opacity: 0.5;
 }
 .footer-container {
   display: flex;
@@ -446,16 +482,17 @@ p {
   font-size: 13px;
   color: #747272;
 }
-/*.footer::after {
+.footer::after {
   position: absolute;
+  z-index: 1;
   width: 278px;
   height: 213px;
+  background-image: url(../images/footеr_decor.png);
   background-repeat: no-repeat;
-  background-image: url(../images/decor-footer.png);
   bottom: 0px;
   right: 0px;
-  content: '';
-}*/
+  /*content: url(../images/footеr_decor.png);*/
+}
 /*####-----####*/
 /*Modal*/
 .backdrop {
@@ -474,6 +511,7 @@ p {
   transition:
     opacity 0.5s,
     visibility 0.5s;
+  /*pointer-events: none;*/
 }
 .modal {
   position: relative;
@@ -484,6 +522,30 @@ p {
   max-height: 681px;
   height: 100%;
   background-color: var(--primary);
+  overflow-y: auto; /*модливість скролу по осі y*/
+}
+.modal h2 {
+  color: #fff;
+  font-family: 'Play', sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  text-align: center;
+}
+.modal h3 {
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+.modal h3 span {
+  color: #2b7fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+}
+.modal-form {
 }
 .backdrop.is-hidden {
   /*Щоб працювала можлива анімація*/
@@ -496,4 +558,65 @@ p {
   top: 42px;
   right: 42px;
 }
-parent: last-child;
+
+/*Form*/
+.form-field {
+  display: block;
+  margin: 0 auto 24px;
+  width: 310px;
+  height: 52px;
+}
+.form-label {
+  display: block; /*label за замовчуванням строковий*/
+  position: absolute;
+  /*top: 18px;
+  left: 32px;*/
+}
+.form-input {
+  padding: 18px 33px;
+  width: 100%;
+  border: 2px solid #747272;
+  border-radius: 32px;
+
+  line-height: 1.17;
+  background-color: transparent;
+}
+.form-input:focus {
+  border-color: #747272;
+  background-color: #d4d3d3;
+  outline: none;
+}
+.form-input::placeholder {
+  color: white;
+  line-height: 1.17;
+  font-size: 16px;
+}
+.form-button {
+  display: block;
+  border-radius: 32px;
+
+  width: 281px;
+  height: 53px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  background-color: var(--color-brand);
+  border: 1px solid var(--color-brand);
+  transition: all 0.7s ease;
+  margin: 0 auto 8px;
+}
+.form-button:hover {
+  color: black;
+  background-color: #d4d3d3;
+  border-color: #747272;
+  transform: translateY(-3px);
+}
+.agree {
+  color: #747272;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  text-align: center;
+  text-underline-offset: 2px;
+}
