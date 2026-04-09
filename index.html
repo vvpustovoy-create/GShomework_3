@@ -228,6 +228,8 @@
                     id="user-name"
                     name="user-name"
                     placeholder="Ваше ім'я та прізвище"
+                    required
+                    pattern="^[А-Яа-яЁёA-Za-z]+\s[А-Яа-яЁёA-Za-z]+$"
                   />
                 </div>
                 <div class="form-field">
@@ -238,6 +240,8 @@
                     id="user-tel"
                     name="user-tel"
                     placeholder="Ваш номер телефону"
+                    required
+                    pattern="^\+380\d{9}$"
                   />
                 </div>
                 <div class="form-field">
@@ -248,9 +252,11 @@
                     id="user-email"
                     name="user-email"
                     placeholder="Ваша електронна пошта"
+                    required
+                    pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                   />
                 </div>
-                <button class="form-button button" type="submit">
+                <button class="form-button" type="submit">
                   Записатись безкоштовно
                 </button>
                 <p class="agree">
@@ -336,6 +342,7 @@
         </div>
       </div>
     </footer>
+    <!-- MODAL FORM -->
     <div class="backdrop is-hidden">
       <div class="modal">
         <button class="modal-btn-close" type="button">Close</button>
@@ -344,7 +351,7 @@
           Запишіться <span>безкоштовно</span> <br />
           та отримайте подарунок
         </h3>
-        <form name="modal-form" autocomplete="off" novalidate>
+        <form name="modal" autocomplete="off">
           <div class="form-field">
             <label class="form-label" for="user-name"></label>
             <input
@@ -353,6 +360,8 @@
               id="user-name"
               name="user-name"
               placeholder="Ваше ім'я та прізвище"
+              required
+              pattern="^[А-Яа-яЁёA-Za-z]+\s[А-Яа-яЁёA-Za-z]+$"
             />
           </div>
           <div class="form-field">
@@ -363,7 +372,10 @@
               id="user-tel"
               name="user-tel"
               placeholder="Ваш номер телефону"
+              required
+              pattern="^\+380\d{9}$"
             />
+            <!-- required- обов'язкове поле -->
           </div>
           <div class="form-field">
             <label class="form-label" for="user-email"></label>
@@ -373,13 +385,15 @@
               id="user-email"
               name="user-email"
               placeholder="Ваша електронна пошта"
+              required
+              pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
             />
           </div>
           <button class="form-button button" type="submit">
             Записатись безкоштовно
           </button>
           <p class="agree">
-            Натискаючи на кнопку я погоджуюсь з <br />
+            Натискаючи на кнопку я погоджуюсь з
             <a class="agree-link" href="#">політикою конфіденційності</a>
           </p>
         </form>

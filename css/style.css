@@ -552,8 +552,7 @@ p {
   font-weight: 600;
   font-size: 22px;
 }
-.modal-form {
-}
+
 .backdrop.is-hidden {
   /*Щоб працювала можлива анімація*/
   visibility: hidden; /*Ховає модальне вікно*/
@@ -584,7 +583,6 @@ p {
   width: 100%;
   border: 2px solid #747272;
   border-radius: 32px;
-
   line-height: 1.17;
   background-color: transparent;
 }
@@ -598,6 +596,14 @@ p {
   line-height: 1.17;
   font-size: 16px;
 }
+/*Валідація форми*/
+/*зміна фона ячейки якщо вона заповнена*/
+input:not(:placeholder-shown) {
+  background-color: white;
+}
+/*input:required {
+  background-color: antiquewhite; } /* Підсвічує обов'язкові поля червоним */
+
 .form-button {
   display: block;
   border-radius: 32px;
@@ -618,6 +624,7 @@ p {
   border-color: #747272;
   transform: translateY(-3px);
 }
+
 .agree,
 a {
   color: #747272;
