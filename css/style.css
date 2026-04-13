@@ -452,7 +452,7 @@ aboutus-text {
 .footer {
   position: relative;
   background-color: var(--primary);
-  opacity: 0.5;
+ 
 }
 .footer-container {
   display: flex;
